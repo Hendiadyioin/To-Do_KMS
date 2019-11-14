@@ -1,0 +1,27 @@
+<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Titel</th>
+    <th scope="col">Beschreibung</th>
+    <th scope="col">Erledigt?</th>
+    <th scope="col"></th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of allTasks; let i = index">
+      <td>{{i+1}}</td>
+      <td class="{{i}}+title">{{task.title}}</td>
+      <td>{{task.description}}</td>
+      <td *ngIf="task.isDone">✓</td>
+      <td *ngIf="!task.isDone">X</td>
+      <td *ngIf="task.isDone">
+        <button class="delete" (click)="changeDone(task)">X</button>
+      </td>
+      <td *ngIf="!task.isDone">
+        <button class="edit" (click)="changeDone(task)">✓</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

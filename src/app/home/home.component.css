@@ -1,0 +1,17 @@
+
+
+th {
+  color: darkviolet;
+}
+
+.edit {
+  background-color: #24BBCC;
+  width: 30px;
+  height: 30px;
+}
+
+.delete {
+  background-color: #FF1493;
+  width: 30px;
+  height: 30px;
+}
